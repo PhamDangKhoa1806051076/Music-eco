@@ -1,83 +1,54 @@
-﻿# 🎵 Music-eco — Floating Lyric Cards Player
+# 🎵 Music-eco — Floating Lyric Cards Player
 
-Tái hiện trào lưu lập trình **"Thẻ lời bài hát nổi bồng bềnh trên màn hình" (Floating Sticky Notes Lyrics)** cực hot trên TikTok / Reels.
-
-Chương trình phát nhạc kèm hiệu ứng thẻ ghi chú pastel bay lên trên màn hình Desktop, mỗi thẻ hiển thị lời bài hát với hiệu ứng gõ chữ máy đánh chữ (typewriter) — đồng bộ chính xác từng mili-giây theo nhịp bài hát.
+Ứng dụng phát nhạc kèm **thẻ lời bài hát nổi bồng bềnh (Floating Lyric Cards)** trên màn hình theo phong cách TikTok / Reels.
 
 ---
 
-## 🌟 Tính năng chính
-
-* **Đồng bộ chuẩn xác** lời bài hát theo từng mili-giây với file nhạc `.mp3`.
-* **Hiệu ứng máy gõ chữ (typewriter)** — lời bài hát gõ từng ký tự theo thời gian thực.
-* **Hiệu ứng trôi bồng bềnh (rise)** — thẻ ghi chú pastel bay nhẹ nhàng từ dưới lên trên màn hình.
-* **Bảng màu pastel aesthetic** — 7 bảng màu giấy ghi chú nghệ thuật ngẫu nhiên.
-* **Kéo thả thẻ bằng chuột** — bạn có thể di chuyển thẻ note đến bất kỳ vị trí nào trên màn hình.
-* **Luôn nổi trên cùng (Always on Top)** — thẻ đè lên VS Code, Chrome, Desktop...
-* **Phím tắt ESC** để dừng bất cứ lúc nào.
+## ✨ Tính năng nổi bật
+- **Đồng bộ lời bài hát**: Khớp chuẩn xác từng mili-giây theo file `.mp3`.
+- **Hiệu ứng độc đáo**: Gõ chữ máy đánh chữ (*typewriter*) & thẻ bay lơ lửng (*rise*).
+- **Giao diện Aesthetic**: 7 tone màu pastel ngẫu nhiên, bo góc mềm mại, luôn nổi trên cùng (*Always on Top*).
+- **Tương tác linh hoạt**: Dùng chuột kéo thả thẻ tùy ý, nhấn phím `ESC` để dừng.
 
 ---
 
-## 📁 Cấu trúc dự án
-
-```
+## 📁 Cấu trúc thư mục
+```text
 Music-eco/
-├── README.md
-├── SweetBoy/                ← Bài Sweet Boy - Malcolm Todd
+├── SweetBoy/       # Sweet Boy - Malcolm Todd (26 câu)
 │   ├── SweetBoy.py
 │   ├── SweetBoy.mp3
-│   └── lyrics.txt (26 câu đồng bộ)
-│
-└── Earrings/                ← Bài Earrings - Malcolm Todd
+│   └── lyrics.txt
+└── Earrings/       # Earrings - Malcolm Todd (39 câu)
     ├── Earrings.py
     ├── Earrings.mp3
-    └── lyrics.txt (39 câu đồng bộ)
+    └── lyrics.txt
 ```
 
 ---
 
-## 🚀 Cách chạy
+## 🚀 Cài đặt & Khởi chạy
 
-### Yêu cầu
-- Python 3.10+
-- `pip install pygame`
-
-### Phát bài Sweet Boy
-```powershell
-cd SweetBoy
-python SweetBoy.py
-```
-
-### Phát bài Earrings
-```powershell
-cd Earrings
-python Earrings.py
-```
-
----
-
-## 🎶 Thêm bài hát mới
-
-Mỗi bài hát chỉ cần 1 thư mục riêng gồm 3 file:
-
-1. **TenBai.py** — Copy từ bất kỳ file `.py` có sẵn, sửa tên file nhạc mặc định.
-2. **TenBai.mp3** — File nhạc của bạn.
-3. **lyrics.txt** — Lời bài hát với cú pháp:
+1. **Cài đặt thư viện:**
+   ```bash
+   pip install pygame
    ```
-   [giây_bắt_đầu|tốc_độ_gõ_ms] Lời bài hát
+
+2. **Chạy bài hát:**
+   ```bash
+   # Bài Sweet Boy
+   cd SweetBoy
+   python SweetBoy.py
+
+   # Bài Earrings
+   cd Earrings
+   python Earrings.py
    ```
 
 ---
 
 ## 🛠 Công nghệ sử dụng
-
-| Thành phần | Công nghệ |
-| :--- | :--- |
-| GUI / Cửa sổ nổi | Python Tkinter (Toplevel, overrideredirect) |
-| Phát nhạc | Pygame (pygame.mixer) |
-| Đồng bộ thời gian | LRCLIB API (synced lyrics) |
-| Hiệu ứng | Typewriter + Rise animation |
-
----
-
-*Made with ❤️ and Python*
+- **Ngôn ngữ:** Python 3
+- **Giao diện:** Tkinter (Toplevel, transparent/borderless cards)
+- **Âm thanh:** Pygame (pygame.mixer)
+- **Đồng bộ lời:** LRCLIB (synced lyrics)
