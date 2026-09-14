@@ -1,0 +1,54 @@
+# ==============================================================================
+# BÀI HÁT: EARRINGS - MALCOLM TODD
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE Earrings.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms] Lời bài hát
+# ==============================================================================
+
+# --- Verse 1 ---
+[1.03|60] Her love is in your head
+[2.96|55] You lost your earrings in her bed
+[6.36|55] You couldn't tell her that you lost them
+[9.41|55] 'Cause you're scared and you're not talking
+[12.49|55] So you think of what to say
+[15.33|55] Then save it for another day
+[18.52|55] 'Cause you just never had the heart
+[21.57|60] Now they just drift further apart
+
+# --- Outro Verse 1 ---
+[24.12|110] From you
+[30.13|110] From you
+[36.15|110] From you
+[41.83|110] From you
+
+# --- Verse 2 (repeat, sâu lắng hơn) ---
+[72.69|50] Her love is in your head
+[74.99|50] You lost your earrings in her bed
+[78.19|50] You couldn't tell her that you lost them
+[81.66|50] 'Cause you're scared and you're not talking
+[84.56|50] So you think of what to say
+[86.93|50] Then save it for another day
+[90.14|50] 'Cause you just never had the heart
+[93.04|55] Now they just drift further apart
+
+# --- Bridge (Tăng tốc) ---
+[96.32|80] From you
+[97.77|40] Extra, extra read all about it
+[100.28|35] Malcolm's in his feelings and he can't get out of it
+[103.70|40] Extra, extra read all about it
+[106.34|35] Malcolm's in his feelings and he can't get out of it
+[109.60|40] Extra, extra read all about it
+[112.37|35] Malcolm's in his feelings and he can't get out of it
+[115.36|40] Extra, extra read all about it
+[118.47|35] Malcolm's in his feelings and he can't get out of it
+
+# --- Outro ---
+[120.97|110] From you
+[126.23|110] From you
+[131.80|110] From you
+[133.23|40] Extra, extra read all about it
+[136.31|35] Malcolm's in his feelings and he can't get out of it
+[139.02|40] Extra, extra read all about it
+[142.13|35] Malcolm's in his feelings and he can't get out of it
+[145.04|55] Can't get out of it
+[146.94|55] Can't get out of it
+[149.21|50] I hope you like my mixtape

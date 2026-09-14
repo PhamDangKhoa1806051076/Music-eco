@@ -1,0 +1,37 @@
+# ==============================================================================
+# BÀI HÁT: SWEET BOY - MALCOLM TODD
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE SweetBoy.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms] Lời bài hát
+# ==============================================================================
+
+[0.0|75] One, two, three, four
+[3.12|75] Can we go home now? It's getting later, baby
+[8.48|70] Can we go home now? You think it's time to give up
+[13.99|70] We're on our own now, no place to drive you crazy
+[19.44|80] Don't share a home now, I'm okay 'til tonight
+
+[25.99|85] Ties get broken, you need space, and
+[31.26|90] You're not mad when I'm not late
+[36.44|80] Now, I'm not there, and you're just fine
+[41.98|95] But I'm okay 'til tonight
+
+[47.95|70] I want you to go, I wrote it in bold
+[52.95|65] Yeah, I got a plan, and you can't be involved
+[58.50|65] And when it gets great, don't start to get mad
+[63.82|65] 'Cause I'ma lose time, when you are free to have
+
+[70.30|45] Fly out to the city, they're throwing some money at me
+[73.22|40] I know it's been shitty to see the attention I'm getting
+[75.87|55] But it's been coming since I've been singing baby
+[80.70|55] Now I'll just see you when I'm on business with everyone
+[85.78|50] You can listen (You can write me from where you are living)
+
+[90.38|75] Can we go home now? It's getting later, baby
+[95.93|70] Can we go home now? You think it's time to give up
+[101.26|70] We're on our own now, no place to drive you crazy
+[106.81|80] Don't share a home now, I'm okay 'til tonight
+
+[113.25|85] Ties get broken, you need space, and
+[118.41|90] You're not mad when I'm not late
+[123.62|80] Now, I'm not there, and you're just fine
+[129.14|95] But I'm okay 'til tonight
