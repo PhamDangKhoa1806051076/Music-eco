@@ -1,0 +1,87 @@
+# ==============================================================================
+# BÀI HÁT: STARBOY - THE WEEKND (FEAT. DAFT PUNK)
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE Starboy.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms] Lời bài hát
+# ==============================================================================
+
+# --- Verse 1 ---
+[15.71|50] I'm tryna put you in the worst mood, ah
+[18.36|50] P1 cleaner than your church shoes, ah
+[20.98|50] Milli' point two just to hurt you, ah
+[23.46|50] All red Lamb' just to tease you, ah
+[26.05|50] None of these toys on lease too, ah
+[28.63|55] Made your whole year in a week too, yeah
+[31.24|50] Main bitch outta your league too, ah
+[33.70|50] Side bitch out of your league too, ah
+
+# --- Pre-Chorus 1 ---
+[36.68|50] House so empty, need a centerpiece
+[38.94|50] 20 racks a table, cut from ebony
+[41.69|50] Cut that ivory into skinny pieces
+[43.83|45] Then she clean it with her face, man, I love my baby, ah
+[46.98|50] You talking money, need a hearing aid
+[49.51|50] You talking 'bout me, I don't see the shade
+[52.16|50] Switch up my style, I take any lane
+[54.35|50] I switch up my cup, I kill any pain
+
+# --- Chorus 1 ---
+[60.76|90] Look what you've done
+[65.72|70] I'm a motherfucking starboy
+[71.06|90] Look what you've done
+[76.03|70] I'm a motherfucking starboy
+
+# --- Verse 2 ---
+[77.72|50] Every day a nigga try to test me, ah
+[80.25|50] Every day a nigga try to end me, ah
+[82.80|50] Pull off in that Roadster SV, ah
+[85.40|50] Pockets overweight, getting hefty, ah
+[88.01|50] Coming for the king, that's a far cry, I
+[90.72|55] I come alive in the fall time, I
+[93.33|50] The competition, I don't really listen
+[95.49|45] I'm in the blue Mulsanne bumping New Edition
+
+# --- Pre-Chorus 2 ---
+[98.58|50] House so empty, need a centerpiece
+[101.07|50] 20 racks a table, cut from ebony
+[103.75|50] Cut that ivory into skinny pieces
+[105.80|45] Then she clean it with her face, man, I love my baby, ah
+[108.83|50] You talking money, need a hearing aid
+[111.44|50] You talking 'bout me, I don't see the shade
+[114.16|50] Switch up my style, I take any lane
+[116.39|50] I switch up my cup, I kill any pain
+
+# --- Chorus 2 ---
+[122.78|90] Look what you've done
+[127.60|70] I'm a motherfucking starboy
+[133.09|90] Look what you've done
+[137.86|70] I'm a motherfucking starboy
+
+# --- Verse 3 ---
+[140.04|55] Let a nigga brag Pitt
+[141.79|45] Legend of the fall, took the year like a bandit
+[144.30|45] Bought mama a crib and a brand-new wagon
+[146.63|45] Now she hit the grocery shop looking lavish
+[149.40|50] Star Trek roof in that Wraith of Khan
+[151.86|50] Girls get loose when they hear this song
+[154.59|45] A hundred on the dash, get me close to God
+[156.87|50] We don't pray for love, we just pray for cars
+
+# --- Pre-Chorus 3 ---
+[160.49|50] House so empty, need a centerpiece
+[162.85|50] 20 racks a table, cut from ebony
+[165.70|50] Cut that ivory into skinny pieces
+[167.71|45] Then she clean it with her face, man, I love my baby, ah
+[170.89|50] You talking money, need a hearing aid
+[173.31|50] You talking 'bout me, I don't see the shade
+[176.02|50] Switch up my style, I take any lane
+[178.20|50] I switch up my cup, I kill any pain
+
+# --- Outro Chorus ---
+[184.63|90] Look what you've done
+[189.65|70] I'm a motherfucking starboy
+[194.90|90] Look what you've done
+[199.92|70] I'm a motherfucking starboy
+[205.22|90] Look what you've done
+[210.35|70] I'm a motherfucking starboy
+[215.62|90] Look what you've done
+[220.56|70] I'm a motherfucking starboy

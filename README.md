@@ -19,9 +19,13 @@ Music-eco/
 │   ├── SweetBoy.py
 │   ├── SweetBoy.mp3
 │   └── lyrics.txt
-└── Earrings/       # Earrings - Malcolm Todd (39 câu)
-    ├── Earrings.py
-    ├── Earrings.mp3
+├── Earrings/       # Earrings - Malcolm Todd (39 câu)
+│   ├── Earrings.py
+│   ├── Earrings.mp3
+│   └── lyrics.txt
+└── Starboy/        # Starboy - The Weeknd ft. Daft Punk (64 câu)
+    ├── Starboy.py
+    ├── Starboy.mp3
     └── lyrics.txt
 ```
 
@@ -43,6 +47,10 @@ Music-eco/
    # Bài Earrings
    cd Earrings
    python Earrings.py
+
+   # Bài Starboy
+   cd Starboy
+   python Starboy.py
    ```
 
 ---
