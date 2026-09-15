@@ -1,0 +1,66 @@
+# ==============================================================================
+# BÀI HÁT: DIE WITH A SMILE - LADY GAGA & BRUNO MARS
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE DieWithASmile.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|ca_sĩ] Lời bài hát
+# Ca sĩ hỗ trợ: Bruno (🎸 Bruno Mars), Gaga (🌹 Lady Gaga), Duet (✨ Song ca)
+# ==============================================================================
+
+# --- Intro ---
+[3.34|90|Duet] Ooh, ooh
+
+# --- Verse 1 (Bruno Mars) ---
+[9.16|65|Bruno] I, I just woke up from a dream
+[15.91|65|Bruno] But you and I had to say goodbye
+[20.46|65|Bruno] And I don't know what it all means
+[24.78|65|Bruno] But since I survived, I realized
+[29.36|60|Bruno] Wherever you go, that's where I'll follow
+[34.15|60|Bruno] Nobody's promised tomorrow
+[38.63|55|Bruno] So I'ma love you every night like it's the last night
+[42.64|65|Bruno] Like it's the last night
+
+# --- Chorus 1 (Duet) ---
+[44.80|65|Duet] If the world was ending, I'd wanna be next to you
+[53.98|65|Duet] If the party was over and our time on Earth was through
+[63.04|70|Duet] I'd wanna hold you just for a while
+[67.69|80|Duet] And die with a smile
+[72.33|65|Duet] If the world was ending, I'd wanna be next to you
+
+# --- Post-Chorus ---
+[80.88|90|Duet] (Ooh, ooh)
+
+# --- Verse 2 (Lady Gaga) ---
+[85.01|65|Gaga] Oh-ooh, lost, lost in the words that we scream
+[93.16|60|Gaga] I don't even wanna do this anymore
+[97.85|60|Gaga] 'Cause you already know what you mean to me
+[101.36|60|Gaga] And our love's the only one worth fighting for
+[106.92|60|Gaga] Wherever you go, that's where I'll follow
+[111.55|60|Gaga] Nobody's promised tomorrow
+[116.13|55|Gaga] So I'ma love you every night like it's the last night
+[120.02|65|Gaga] Like it's the last night
+
+# --- Chorus 2 (Duet) ---
+[122.34|65|Duet] If the world was ending, I'd wanna be next to you
+[131.41|65|Duet] If the party was over and our time on Earth was through
+[140.30|70|Duet] I'd wanna hold you just for a while
+[145.11|80|Duet] And die with a smile
+[149.63|65|Duet] If the world was ending, I'd wanna be next to you
+
+# --- Bridge (Harmonized) ---
+[158.33|80|Duet] Right next to you
+[163.20|80|Duet] Next to you
+[167.68|80|Duet] Right next to you
+[171.37|90|Duet] Oh-oh, oh
+
+# --- Guitar Solo Break (174.9s - 190.9s) ---
+
+# --- Final Chorus (Climax Duet) ---
+[190.95|65|Duet] If the world was ending, I'd wanna be next to you
+[199.70|65|Duet] If the party was over and our time on Earth was through
+[209.23|70|Duet] I'd wanna hold you just for a while
+[213.64|80|Duet] And die with a smile
+[218.26|65|Duet] If the world was ending, I'd wanna be next to you
+[227.29|65|Duet] If the world was ending, I'd wanna be next to you
+
+# --- Outro ---
+[235.88|90|Duet] Ooh, ooh
+[238.90|75|Duet] I'd wanna be next to you

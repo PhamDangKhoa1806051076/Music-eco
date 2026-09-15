@@ -6,8 +6,10 @@
 
 ## ✨ Tính năng nổi bật
 - **Đồng bộ lời bài hát**: Khớp chuẩn xác từng mili-giây theo file `.mp3`.
-- **Hiệu ứng độc đáo**: Gõ chữ máy đánh chữ (*typewriter*) & thẻ bay lơ lửng (*rise*).
-- **Giao diện Aesthetic**: 7 tone màu pastel ngẫu nhiên, bo góc mềm mại, luôn nổi trên cùng (*Always on Top*).
+- **Hiệu ứng độc đáo**: Gõ chữ máy đánh chữ (*typewriter*) kèm con trỏ nhấp nháy & thẻ bay lơ lửng (*rise*).
+- **Chuyển động đung đưa (Sway Motion)**: Thẻ chuyển động hình sin nhẹ nhàng lơ lửng trong gió.
+- **Phân vai ca sĩ thông minh (Singer Role Theming)**: Đổi màu sắc, phong cách và gắn badge riêng cho từng ca sĩ (Bruno Mars, Lady Gaga, Duet).
+- **Giao diện Aesthetic**: Tone màu pastel và vintage thẩm mỹ, luôn nổi trên cùng (*Always on Top*).
 - **Tương tác linh hoạt**: Dùng chuột kéo thả thẻ tùy ý, nhấn phím `ESC` để dừng.
 
 ---
@@ -15,17 +17,21 @@
 ## 📁 Cấu trúc thư mục
 ```text
 Music-eco/
-├── SweetBoy/       # Sweet Boy - Malcolm Todd (26 câu)
+├── SweetBoy/           # Sweet Boy - Malcolm Todd (26 câu)
 │   ├── SweetBoy.py
 │   ├── SweetBoy.mp3
 │   └── lyrics.txt
-├── Earrings/       # Earrings - Malcolm Todd (39 câu)
+├── Earrings/           # Earrings - Malcolm Todd (39 câu)
 │   ├── Earrings.py
 │   ├── Earrings.mp3
 │   └── lyrics.txt
-└── Starboy/        # Starboy - The Weeknd ft. Daft Punk (64 câu)
-    ├── Starboy.py
-    ├── Starboy.mp3
+├── Starboy/            # Starboy - The Weeknd ft. Daft Punk (64 câu)
+│   ├── Starboy.py
+│   ├── Starboy.mp3
+│   └── lyrics.txt
+└── DieWithASmile/      # Die With A Smile - Lady Gaga & Bruno Mars (40 câu)
+    ├── DieWithASmile.py
+    ├── DieWithASmile.mp3
     └── lyrics.txt
 ```
 
@@ -51,6 +57,10 @@ Music-eco/
    # Bài Starboy
    cd Starboy
    python Starboy.py
+
+   # Bài Die With A Smile (Bản đặc biệt song ca & uốn lượn)
+   cd DieWithASmile
+   python DieWithASmile.py
    ```
 
 ---
