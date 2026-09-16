@@ -1,0 +1,84 @@
+# ==============================================================================
+# BÀI HÁT: THAT GIRL - OLLY MURS
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE ThatGirl.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|cảm_xúc] Lời tiếng Anh // Vietsub cảm xúc
+# Cảm xúc hỗ trợ:
+#   - regret     : 🌇 BITTERSWEET REGRET (Tiếc nuối & Day dứt)
+#   - longing    : 💭 LONGING FOR YOU (Khao khát & Tự trách)
+#   - anthem     : 📢 SPEAK UP & LOVE (Lời khuyên chân thành, điệp khúc rực rỡ)
+#   - broken     : 💔 NO HOME FOR BROKEN HEART (Trái tim tan vỡ không chốn nương náu)
+#   - blame      : 🥀 BLAMING MYSELF (Cô đơn & Chẳng thể trách ai)
+#   - cherish    : ✨ CHERISH THE LOVE (Đừng để vuột mất tình yêu)
+# ==============================================================================
+
+# --- Verse 1 (Sự day dứt ban đầu) ---
+[0.19|55|regret] There's a girl, but I let her get away // Từng có một cô gái, nhưng anh đã để cô ấy bước đi
+[5.52|55|regret] It's all my fault, 'cause pride got in the way // Tất cả là lỗi của anh, bởi lòng kiêu hãnh ngớ ngẩn chen ngang
+[10.86|55|regret] And I'd be lying if I said, I was okay // Và anh sẽ là kẻ dối trá nếu bảo rằng mình vẫn ổn
+[16.27|55|regret] About that girl, the one I let get away // Về người con gái ấy, người mà anh đã đánh mất...
+
+# --- Pre-Chorus 1 (Tự vấn & khao khát cơ hội) ---
+[21.25|55|longing] I keep saying no // Anh cứ mãi lắc đầu không muốn tin
+[23.76|50|longing] This can't be the way it was supposed to be // Mọi chuyện đáng ra đâu thể kết thúc thế này
+[26.50|55|longing] I keep saying no // Anh cứ mãi tự nhủ trong lòng
+[29.17|50|longing] There's gotta be a way to get you close to me // Phải có một cách nào đó để đưa em trở lại bên anh
+
+# --- Chorus 1 (Lời nhắn nhủ nhiệt huyết) ---
+[32.23|45|anthem] Now I know, you gotta speak up if you want somebody // Giờ đây anh hiểu, hãy dũng cảm lên tiếng nếu bạn thật lòng yêu ai đó
+[36.21|50|anthem] Can't let them get away, oh no // Đừng dại dột để họ bước ra khỏi cuộc đời
+[39.17|50|anthem] You don't wanna end up sorry // Bạn sẽ chẳng muốn sống trong tiếc nuối muộn màng đâu
+[41.65|50|anthem] The way that I'm feeling every day // Như cái cách mà anh đang đau đớn gặm nhấm mỗi ngày
+[43.62|55|broken] (Don't you know?) No, no, no, no // (Bạn có biết không?) Không, đừng như anh...
+[47.00|55|broken] There's no home for the broken heart // Chẳng có mái nhà nào sưởi ấm cho một trái tim tan vỡ
+[48.15|55|broken] (Don't you know?) No, no, no, no // (Bạn thấu chăng?) Không, đau đớn lắm...
+[52.41|55|broken] There's no home for the broken // Chẳng có chốn dung thân cho kẻ vụn vỡ cõi lòng
+
+# --- Verse 2 (Nhìn lại sai lầm) ---
+[54.37|55|regret] There's a girl, but I let her get away // Từng có một cô gái, nhưng anh đã để lỡ mất cô ấy
+[59.61|55|regret] It's my fault, 'cause I said I needed space // Là lỗi của anh, vì anh từng bảo cần không gian riêng
+[65.06|50|regret] And I've been torturing myself night and day // Để rồi giờ đây anh tự dằn vặt mình thâu đêm suốt sáng
+[70.38|50|regret] About that girl, the one I let get away // Về người con gái ấy, người anh đã để vụt mất khỏi tầm tay
+
+# --- Pre-Chorus 2 ---
+[75.19|55|longing] I keep saying no // Anh vẫn không ngừng phủ nhận sự thật
+[77.67|50|longing] This can't be the way it was supposed to be // Chuyện tình này đâu thể chia xa như thế
+[80.50|55|longing] I keep saying no // Trái tim anh vẫn không thôi gào thét
+[82.93|45|longing] There's gotta be a way to get you close to me // Chắc chắn phải có cách mang em quay về bên anh
+
+# --- Chorus 2 ---
+[86.81|45|anthem] You gotta speak up if you want somebody // Hãy nói ra hết tấm lòng nếu bạn thương một người
+[90.31|50|anthem] Can't let them get away, oh no // Đừng để người ấy rời xa, xin đừng...
+[93.08|50|anthem] You don't wanna end up sorry // Đừng để bản thân phải chìm trong ân hận
+[95.50|50|anthem] The way that I'm feeling every day // Như vết thương ngày qua ngày giằng xé anh
+[97.45|55|broken] (Don't you know?) No, no, no, no // (Bạn có hay?) Không, xin đừng như anh...
+[100.95|55|broken] There's no home for the broken heart // Chẳng mái nhà nào chứa chấp một trái tim nát tan
+[102.85|55|broken] (Don't you know?) No, no, no, no // (Bạn hiểu không?) Không bao giờ có...
+[106.25|55|broken] There's no home for the broken // Chẳng có bến đỗ bình yên cho kẻ lỡ đánh mất tình yêu
+
+# --- Bridge (Đỉnh điểm sự cô đơn & tự trách) ---
+[109.28|50|blame] No home for me (no) // Chẳng còn mái nhà nào dành cho anh nữa...
+[111.82|50|blame] No home 'cause I'm broken // Chẳng còn nơi về bởi anh đã hoàn toàn vụn vỡ
+[114.52|50|blame] No room to breathe (no) // Nghẹt thở trong từng cơn đau
+[116.53|50|blame] And I got no one to blame // Và anh chẳng thể trách móc bất cứ ai ngoài chính mình
+[119.98|50|blame] No home for me (no) // Không còn nơi nương tựa...
+[122.63|50|blame] No home 'cause I'm broken // Lạc lõng vì con tim rạn vỡ
+[124.50|50|blame] About that girl, the one I let get away // Tất cả chỉ vì cô gái mà anh đã để vụt mất...
+
+# --- Chorus 3 (Cao trào bùng nổ) ---
+[129.13|45|anthem] So, you better speak up if you want somebody // Thế nên, hãy bày tỏ ngay khi bạn yêu thương một ai đó!
+[133.33|50|anthem] You can't let them get away, oh no, no // Đừng bao giờ buông tay để họ rời xa!
+[136.28|50|anthem] You don't wanna end up sorry (oh, no) // Bạn sẽ không muốn ôm nỗi hối hận cả đời đâu
+[138.87|50|anthem] The way that I'm feeling every day // Cay đắng như những gì anh đang chịu đựng mỗi ngày
+[140.55|55|broken] (Don't you know?) No, no, no, no // (Bạn thấy không?) Không... đừng dại dột như anh
+[144.09|55|broken] There's no home for the broken heart // Không có chốn nương thân cho trái tim vụn nát
+[145.83|55|broken] (Don't you know?) No, no, no, no // (Xin hãy nhớ lấy...) Không bao giờ có...
+[149.68|55|broken] There's no home for the broken // Chẳng thể có bến đỗ nào cho kẻ vụn vỡ
+
+# --- Outro (Lời nhắn gửi tha thiết) ---
+[151.47|50|cherish] Oh, you don't wanna lose that love // Ôi, bạn sẽ không muốn đánh mất tình yêu quý giá ấy đâu
+[154.65|50|cherish] It's only gonna hurt too much // Bởi vết cắt ấy sẽ đau đớn khôn cùng
+[156.53|50|cherish] (I'm telling you) you don't wanna lose that love // (Anh tha thiết khuyên bạn) Đừng để tình yêu vuột mất
+[159.95|50|cherish] It's only gonna hurt too much // Nỗi đau ấy sẽ ám ảnh bạn suốt đời
+[161.84|50|cherish] (I'm telling you) you don't wanna lose that love // Đừng bao giờ buông tay người mình thương...
+[165.00|55|cherish] 'Cause there's no home for the broken // Bởi vì chẳng có nơi chốn nào che chở cho một con tim tan nát
+[167.56|60|regret] About that girl, the one I let get away // Về người con gái ấy... người anh đã để vuột mất...

@@ -1,0 +1,60 @@
+# ==============================================================================
+# BÀI HÁT: BACK TO FRIENDS - SOMBR
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE BackToFriends.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|cảm_xúc] Lời bài hát // Vietsub cảm xúc
+# Cảm xúc hỗ trợ:
+#   - tender    : 🌧️ TENDER MEMORY (Sự ngập ngừng & Vỡ vụn)
+#   - ache      : 💔 HEARTBROKEN (Câu hỏi nhói buốt tâm can)
+#   - memory    : ❄️ DECEMBER REGRET (Hồi ức tháng Mười Hai buốt giá)
+#   - betrayal  : 🥀 DEVIL IN YOUR EYES (Cay đắng & Phản bội)
+#   - explosive : ⚡ SHATTERED CLIMAX (Bùng nổ cao trào u uất)
+#   - faded     : 🌫️ STRANGER (Tan biến thành người dưng)
+# ==============================================================================
+
+# --- Intro / Verse 1 (Ngập ngừng, yếu lòng) ---
+[23.28|65|tender] Touch my body tender // Chạm vào anh thật khẽ khàng
+[27.72|60|tender] 'Cause the feeling makes me weak // Bởi cảm giác này khiến anh yếu lòng
+[33.56|60|tender] Kicking off the covers // Gạt phăng tấm chăn mỏng
+[38.12|55|tender] I see the ceiling while you're looking down at me // Nhìn lên trần nhà khi em cúi xuống nhìn anh
+
+# --- Chorus 1 (Nỗi đau dằn vặt đầu tiên) ---
+[44.44|55|ache] How can we go back to being friends // Làm sao ta có thể quay lại làm bạn bè
+[50.04|55|ache] When we just shared a bed? // Khi đôi ta vừa chung một chiếc giường?
+[54.76|55|ache] How can you look at me and pretend // Sao em có thể nhìn anh và vờ như
+[59.52|55|ache] I'm someone you've never met? // Anh là một kẻ xa lạ em chưa từng quen?
+
+# --- Verse 2 (Ký ức mùa đông buốt giá) ---
+[65.60|60|memory] It was last December // Đó là tháng Mười Hai năm ngoái
+[69.12|55|memory] You were layin' on my chest // Em từng nằm gối đầu trên lồng ngực anh
+[75.52|60|memory] I still remember // Anh vẫn nhớ như in
+[79.52|50|memory] I was scared to take a breath // Anh đã sợ đến mức chẳng dám thở mạnh
+[83.04|50|memory] Didn't want you to move your head // Vì chẳng muốn em phải dịch chuyển đầu...
+
+# --- Chorus 2 (Nhói buốt lặp lại) ---
+[87.50|55|ache] How can we go back to being friends // Làm sao ta có thể quay lại làm bạn
+[90.80|55|ache] When we just shared a bed? (Yeah) // Khi ta vừa ngủ chung một giường?
+[96.08|55|ache] How can you look at me and pretend // Sao em có thể nhìn anh và vờ như
+[101.04|55|ache] I'm someone you've never met? // Anh là người em chưa từng gặp?
+
+# --- Bridge (Sự thật trần trụi & Bùng cháy) ---
+[111.68|55|betrayal] The devil in your eyes // Ánh mắt quỷ dữ nơi em
+[114.80|55|betrayal] Won't deny the lies you've sold // Chẳng thể che giấu những dối lừa em đã trao
+[118.88|50|betrayal] I'm holding on too tight // Anh thì cứ siết tay quá chặt
+[122.72|50|betrayal] While you let go // Trong khi em lại buông tay
+[125.28|70|betrayal] This is casual... // "Đây chỉ là thoáng qua thôi..."
+
+# --- Chorus 3 (Rock Climax bùng nổ dữ dội) ---
+[137.36|50|explosive] How can we go back to being friends // Làm sao ta có thể quay lại làm bạn bè
+[142.44|50|explosive] When we just shared a bed? (Yeah) // Khi ta vừa chung một chiếc giường?!
+[147.76|50|explosive] How can you look at me and pretend // Sao em có thể nhìn anh và giả vờ
+[153.72|50|explosive] I'm someone you've never met? // Anh chỉ là một kẻ xa lạ từng qua đường?
+
+# --- Chorus 4 (Gào xé tột cùng cảm xúc) ---
+[158.56|50|explosive] How can we go back to being friends // Làm sao có thể làm bạn lại đây
+[163.12|50|explosive] When we just shared a bed? (Yeah) // Khi ta vừa chia sẻ hơi ấm cùng nhau?
+[168.36|50|explosive] How can you look at me and pretend // Sao em nhẫn tâm vờ như
+[173.28|50|explosive] I'm someone you've never met? // Anh là người em chưa từng quen biết?
+
+# --- Outro (Hư vô & Tan biến) ---
+[182.00|75|faded] (I'm someone you've never met...) // (Như một kẻ xa lạ chưa từng gặp...)
+[190.00|85|faded] ...someone you've never met. // ...người em chưa từng quen.

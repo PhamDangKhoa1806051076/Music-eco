@@ -6,3 +6,5 @@
 - Earrings - Malcolm Todd
 - Starboy - The Weeknd (feat. Daft Punk)
 - Die With A Smile - Lady Gaga & Bruno Mars
+- Back To Friends - sombr
+- That Girl - Olly Murs
