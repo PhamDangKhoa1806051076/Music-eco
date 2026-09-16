@@ -1,0 +1,61 @@
+# ==============================================================================
+# BÀI HÁT: UNCHANGED MIND - VALENTIN (未曾改变的心意)
+# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI BẢN GỐC UnchangedMind.mp3 (306.8s)
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|cảm_xúc] Lời tiếng Anh // Vietsub u tối chạm đáy nỗi đau
+# Cung bậc cảm xúc u tối:
+#   - solitude : 🌌 MIDNIGHT SOLITUDE (Khoảng lặng vô tận giữa đêm đen 2h sáng)
+#   - ache     : 🥀 SILENT ACHE (Nỗi đau câm lặng không thể thốt nên lời)
+#   - regret   : 🕯️ FADED PROMISES (Ngọn nến tàn và lời hứa úa màu thời gian)
+#   - climax   : ⚡ SHATTERED HEART (Bão tố giằng xé, cao trào tan vỡ dữ dội)
+#   - abyss    : 🌑 ENDLESS VOID (Vực thẳm trống rỗng và sự cô độc cùng cực)
+#   - farewell : 🕊️ UNCHANGED MIND (Trái tim chưa từng đổi thay, buông xuôi trong lặng câm)
+# ==============================================================================
+
+# --- Phase 1: Intro (0:00 - 0:40) - Những nốt piano đơn độc rơi giữa đêm tàn ---
+[3.50|60|solitude] The clock strikes 2 AM, and the silence gets louder // Chiếc đồng hồ điểm hai giờ sáng, và sự im lặng cứ thế lớn dần
+[10.20|60|solitude] Sitting alone in a room full of forgotten shadows // Ngồi một mình giữa căn phòng chật kín những bóng hình đã lãng quên
+[17.80|60|solitude] You never realized when sadness became your only habit // Chẳng biết từ bao giờ, nỗi buồn đã trở thành thói quen duy nhất
+[25.50|60|solitude] Sometimes the deepest wounds never bleed // Đôi khi vết thương sâu nhất lại chẳng hề rơi một giọt máu
+[33.10|60|solitude] They just slowly turn your heart into stone // Chúng chỉ âm thầm biến trái tim thành tảng đá lạnh băng...
+
+# --- Phase 2: Cello Melancholy (0:41 - 1:25) - Tiếng vĩ cầm u buồn trỗi dậy ---
+[41.50|55|ache] And then the cello enters, like a heavy sigh // Rồi tiếng vĩ cầm cất lên, như một tiếng thở dài nặng trĩu
+[48.80|55|ache] I told everyone I was fine, and they believed it // Tôi bảo với cả thế giới mình vẫn ổn, và họ đã tin điều đó
+[56.20|55|ache] But who asks the one who always smiles how much it hurts? // Nhưng có ai hỏi kẻ luôn mỉm cười rằng lòng họ đau đớn biết bao nhiêu?
+[63.80|55|ache] We crossed paths like ships lost in a midnight storm // Ta lướt qua đời nhau như hai con tàu lạc giữa cơn bão đêm
+[71.50|55|ache] Left with nothing but echoes of words left unsaid // Chẳng còn lại gì ngoài tiếng vọng của những lời chưa kịp nói
+[79.20|55|ache] It wasn't the goodbye that hurt the most // Thứ làm ta đau đớn nhất chẳng phải là lời từ biệt
+[86.90|55|ache] It was the flashbacks that followed every sleepless night // Mà là những thước phim ký ức ùa về trong từng đêm mất ngủ
+
+# --- Phase 3: Emotional Build-up (1:26 - 2:09) - Hồi ức cào xé tâm can ---
+[95.40|55|regret] You promised you would stay, remember? // Người từng hứa sẽ ở lại, người còn nhớ không?
+[102.80|55|regret] Now you're just a stranger with all of my secrets // Giờ người chỉ là một kẻ xa lạ mang theo mọi bí mật của tôi
+[110.50|55|regret] How cruel it is that memories live longer than love // Thật tàn nhẫn khi ký ức lại sống dai dẳng hơn tình yêu
+[118.20|55|regret] I still look for you in every crowded room // Tôi vẫn vô thức tìm kiếm bóng hình người giữa biển người xa lạ
+[125.80|55|regret] Even though I know you won't be there // Dẫu biết rằng người sẽ chẳng bao giờ ở đó nữa...
+
+# --- Phase 4: Heart-wrenching Climax (2:10 - 3:00) - Điệp khúc cao trào giằng xé dữ dội ---
+[133.50|50|climax] The melody rises, pulling all the buried pain to light // Giai điệu dâng trào, kéo theo mọi nỗi đau chôn giấu ra ánh sáng
+[141.20|50|climax] Why do the purest hearts always break the hardest? // Tại sao những trái tim thuần khiết nhất lại luôn vỡ vụn đau đớn nhất?
+[148.80|50|climax] I tore myself apart trying to keep you whole // Tôi đã tự xé nát lòng mình chỉ để giữ cho người nguyên vẹn
+[156.50|50|climax] And in the end, I was the one drowning in the dark // Để rồi cuối cùng, tôi là kẻ duy nhất chìm nghỉm giữa bóng tối
+[164.20|50|climax] Look at me now, holding on to a ghost // Hãy nhìn tôi xem, một kẻ ôm lấy ảo ảnh của quá khứ
+[171.80|50|climax] Begging for warmth from a burnt-out candle // Cầu xin hơi ấm từ một ngọn nến đã lụi tàn từ lâu
+[179.50|50|climax] Every drop of the piano feels like a tear falling on my soul // Từng nốt dương cầm rơi xuống như giọt nước mắt nhỏ vào tâm can
+
+# --- Phase 5: Dark Abyss (3:01 - 4:00) - Vực thẳm trống rỗng và sự bất lực ---
+[188.00|55|abyss] There is a special kind of loneliness in missing someone you can't reach // Có một nỗi cô đơn quặn thắt khi nhớ một người mà chẳng thể với tới
+[196.20|55|abyss] I watched you become happy without me // Tôi lặng nhìn người tìm thấy hạnh phúc mà chẳng cần có tôi
+[204.50|55|abyss] And that was both my healing and my destruction // Và điều đó vừa là sự xoa dịu, vừa là sự hủy diệt trong tôi
+[212.80|55|abyss] People come and go, but the void they leave remains forever // Người đến rồi đi, nhưng khoảng trống họ để lại sẽ mãi mãi vẹn nguyên
+[221.00|55|abyss] Maybe some people are only meant to teach us how to survive alone // Có lẽ vài người bước vào đời ta chỉ để dạy ta cách sống sót một mình
+[230.20|55|abyss] The world keeps spinning, indifferent to broken hearts // Thế giới vẫn quay cuồng, lạnh lùng dửng dưng trước những trái tim vụn vỡ
+[239.00|55|abyss] I gave you my unchangeable mind, my entire soul // Tôi đã trao người tấm lòng chưa từng đổi thay, cả linh hồn trọn vẹn
+
+# --- Phase 6: Fading Outro (4:01 - 5:06) - Tắt lịm trong hư vô ---
+[247.50|55|farewell] But in this story, you were the storm, and I was just the fallen leaf // Nhưng trong câu chuyện này, người là cơn bão, còn tôi chỉ là chiếc lá lìa cành
+[256.00|60|farewell] Time doesn't heal everything, it just teaches us to pretend // Thời gian không chữa lành tất cả, nó chỉ dạy ta cách giả vờ không đau
+[265.00|60|farewell] If loving you was my sin, then this eternal ache is my sentence // Nếu yêu người là tội lỗi, thì nỗi đau âm ỉ này là bản án của tôi
+[274.00|65|farewell] The piano softly fades, into the cold night // Tiếng dương cầm dần lặng đi, hòa vào màn đêm lạnh buốt
+[283.00|70|farewell] Even if the whole world changes... my mind remains unchanged // Dẫu cho cả thế giới này xoay vần... tấm lòng tôi vẫn chưa từng đổi thay
+[293.00|80|farewell] Goodbye, my most beautiful sorrow... // Tạm biệt nhé, nỗi đau đẹp đẽ nhất đời tôi...
