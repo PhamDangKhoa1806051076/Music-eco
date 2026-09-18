@@ -102,8 +102,8 @@ class StarFieldApp:
 
         self.load_lyrics()
         self.init_audio()
-        self.build_ui()
         self.generate_stars()
+        self.build_ui()
 
         self.start_wall_time = time.time()
         self.update()
