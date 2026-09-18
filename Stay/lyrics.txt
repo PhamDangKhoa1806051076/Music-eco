@@ -1,58 +1,58 @@
 # ==============================================================================
-# BÀI HÁT: STAY - JUSTIN BIEBER & THE KID LAROI (Giữ em ở lại)
-# ĐỒNG BỘ CHÍNH XÁC TỪNG GIÂY VỚI FILE Stay.mp3 (~215s)
-# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|cảm_xúc] Lời tiếng Anh // Vietsub cảm xúc
+# BÀI HÁT: STAY - JUSTIN BIEBER & THE KID LAROI
+# ĐỒNG BỘ VỚI FILE Stay.mp3
+# Cú pháp: [giây_bắt_đầu|tốc_độ_gõ_ms|cảm_xúc] Lời tiếng Anh
 # Cung bậc cảm xúc:
-#   - longing   : 🌙 DESPERATE LONGING (Khao khát khao khát bỏ không)
-#   - pain      : 💔 QUIET PAIN (Nỗi đau thầm lặng)
-#   - plea      : 🙏 BEGGING (Lạy xin em ở lại)
-#   - storm     : ⛈️ INNER STORM (Cơn bão nội tâm)
-#   - hope      : 🌅 FADING HOPE (Hy vọng nhạt dần)
-#   - release   : 🕊️ RESIGNED RELEASE (Buông xuôi)
+#   - longing   : 🌙 DESPERATE LONGING
+#   - pain      : 💔 QUIET PAIN
+#   - plea      : 🙏 BEGGING
+#   - storm     : ⛈️ INNER STORM
+#   - hope      : 🌅 FADING HOPE
+#   - release   : 🕊️ RESIGNED RELEASE
 # ==============================================================================
 
 # --- Phase 1: Opening (0:00 - 0:30) - Longing & Desperation ---
-[2.00|60|longing] I want you to stay // Em có muốn ở lại với anh không
-[8.50|60|longing] Even if we break, I'll still want you near // Dù có vỡ nát, anh vẫn muốn em ở gần
-[15.00|55|longing] Every second without you is a year // Mỗi giây không có em như một năm
-[22.50|60|longing] I'm drowning in the silence of my fear // Anh đang chìm trong sự im lặng của nỗi sợ
-[28.00|55|longing] Don't let me fall, don't disappear // Đừng để anh ngã, đừng biến mất
+[2.00|60|longing] I want you to stay
+[8.50|60|longing] Even if we break, I'll still want you near
+[15.00|55|longing] Every second without you is a year
+[22.50|60|longing] I'm drowning in the silence of my fear
+[28.00|55|longing] Don't let me fall, don't disappear
 
 # --- Phase 2: Pain & Realization (0:31 - 1:10) - Quiet pain ---
-[33.00|55|pain] I can see it in your eyes // Anh thấy trong ánh mắt em
-[39.50|55|pain] The truth we both deny // Sự thật mà cả hai đều chối bỏ
-[46.00|60|pain] We're just killing the remaining time // Chúng ta đang giết khoảng thời gian còn lại
-[53.00|55|pain] And I don't wanna waste another night // Và anh không muốn lãng phí thêm một đêm nào
-[59.50|55|pain] Holding on to something that's already gone // Giữ chặt thứ đã biến mất
-[66.00|60|pain] But baby, stay // Nhưng em ơi, ở lại đi
+[33.00|55|pain] I can see it in your eyes
+[39.50|55|pain] The truth we both deny
+[46.00|60|pain] We're just killing the remaining time
+[53.00|55|pain] And I don't wanna waste another night
+[59.50|55|pain] Holding on to something that's already gone
+[66.00|60|pain] But baby, stay
 
 # --- Phase 3: Begging & Plea (1:11 - 1:50) - Desperate begging ---
-[73.00|50|plea] I'll crawl on my knees if you need me to // Anh sẽ bò trên đầu gối nếu em cần
-[79.50|50|plea] I'll become somebody new // Anh sẽ trở thành người khác
-[86.00|55|plea] Just don't look at me like you've already chose your side // Đừng nhìn anh như em đã chọn phe khác
-[93.50|55|plea]I'm begging you to stay the night // Anh đang lạy xin em ở lại đêm nay
-[100.00|50|plea] Through the fire, through the rain // Qua lửa, qua mưa
-[106.00|55|plea] I would go through all the pain // Anh sẽ chịu hết nỗi đau
-[112.50|50|plea] Just say you'll stay, say you'll stay // Chỉ cần nói em ở lại, nói em ở lại
+[73.00|50|plea] I'll crawl on my knees if you need me to
+[79.50|50|plea] I'll become somebody new
+[86.00|55|plea] Just don't look at me like you've already chose your side
+[93.50|55|plea] I'm begging you to stay the night
+[100.00|50|plea] Through the fire, through the rain
+[106.00|55|plea] I would go through all the pain
+[112.50|50|plea] Just say you'll stay, say you'll stay
 
 # --- Phase 4: Inner Storm (1:51 - 2:30) - Emotional storm ---
-[118.00|55|storm] My heart is shaking, hands are trembling // Trái tim run rẩy, bàn tay run lên
-[124.50|55|storm] And nothing ever stays the same // Và chẳng có gì tồn tại mãi mãi
-[131.00|60|storm] I'm standing at the edge and I'm calling out your name // Anh đứng bên bờ vực và gọi tên em
-[138.00|50|storm] Through the thunder, through the haze // Qua sấm sét, qua mù mịt
-[144.50|55|storm] I'll keep searching through the maze // Anh sẽ tiếp tục tìm kiếm trong mê cung
-[151.00|50|storm] Until the morning light reveals what we can't fake // Cho đến khi ánh sáng ban ngày phơi bày điều ta không thể giả tạo
+[118.00|55|storm] My heart is shaking, hands are trembling
+[124.50|55|storm] And nothing ever stays the same
+[131.00|60|storm] I'm standing at the edge and I'm calling out your name
+[138.00|50|storm] Through the thunder, through the haze
+[144.50|55|storm] I'll keep searching through the maze
+[151.00|50|storm] Until the morning light reveals what we can't fake
 
 # --- Phase 5: Fading Hope (2:31 - 3:05) - Hope slowly dying ---
-[157.00|60|hope] The clock is ticking and I'm running out of time // Đồng hồ đang chạy và anh hết thời gian
-[164.00|55|hope] You're a memory I want to rewind // Em là ký ức anh muốn tua lại
-[171.00|60|hope] If I could turn back every single second // Nếu anh quay lại từng giây
-[178.00|55|hope] I would change the ways that we decline // Anh sẽ thay đổi cách chúng ta suy sụp
-[184.50|60|hope] But I can't stop the sun from sinking low // Nhưng anh không thể ngăn mặt trời lặn
-[191.00|55|hope] And I can't stop you from letting go // Và anh không thể ngăn em buông tay
+[157.00|60|hope] The clock is ticking and I'm running out of time
+[164.00|55|hope] You're a memory I want to rewind
+[171.00|60|hope] If I could turn back every single second
+[178.00|55|hope] I would change the ways that we decline
+[184.50|60|hope] But I can't stop the sun from sinking low
+[191.00|55|hope] And I can't stop you from letting go
 
 # --- Phase 6: Release (3:06 - End) - Resignation & quiet farewell ---
-[196.00|70|release] So I'll let you go, I'll let you fly // Vậy anh sẽ để em đi, để em bay
-[202.50|75|release] But before you leave, baby, let me try // Nhưng trước khi em đi, em ơi, để anh thử
-[209.00|80|release] Just stay... just stay... // Ở lại đi... ở lại đi...
-[213.50|85|release] Just one more night... // Chỉ thêm một đêm nữa...
+[196.00|70|release] So I'll let you go, I'll let you fly
+[202.50|75|release] But before you leave, baby, let me try
+[209.00|80|release] Just stay... just stay...
+[213.50|85|release] Just one more night...

@@ -1,6 +1,8 @@
 import os
 import sys
 import time
+import math
+import random
 import pygame
 import tkinter as tk
 
@@ -13,47 +15,67 @@ if sys.platform == "win32":
 
 # ==============================================================================
 # CẤU HÌNH GIAO DIỆN SINGLE-SCREEN LYRIC SYNC PLAYER
+# Thiết kế: Bầu trời đêm tĩnh lặng, hiệu ứng sao dịu nhẹ
 # ==============================================================================
-FRAME_DELAY_MS = 20           # Chu kỳ làm mới (~50 FPS)
-TYPEWRITER_SPEED = 55         # Tốc độ gõ chữ mặc định (ms/ký tự)
-MAX_VISIBLE_LYRICS = 3        # Số dòng lyrics hiển thị tối đa
-BG_COLOR = "#080810"           # Nền tối đen
-FG_COLOR = "#E8E8F0"           # Chữ sáng
-DIM_COLOR = "#4A4A5A"          # Chữ mờ (preview/trước đó)
-ACTIVE_COLOR = "#67E8F9"       # Chữ đang gõ (cyan neon)
-PROGRESS_COLOR = "#67E8F9"     # Màu thanh tiến trình
-GLOW_COLOR = "#67E8F9"         # Màu glow
+FRAME_DELAY_MS = 33             # ~30 FPS (mượt mà, nhẹ máy)
+TYPEWRITER_SPEED = 55           # Tốc độ gõ chữ mặc định (ms/ký tự)
+NUM_STARS = 80                  # Số ngôi sao trên màn hình
+BG_HUE_START = 225              # Tông màu nền ban đầu (xanh navy)
+BG_HUE_RANGE = 40               # Phạm vi đổi màu nền (225° → 265° → 225°)
+BG_CYCLE_SECONDS = 180          # 3 phút cho 1 vòng đổi màu nền
 
-# Bảng màu theo cảm xúc (đổi nền theo từng section)
-MOOD_THEMES = {
-    "longing": {"bg": "#080810", "fg": "#E8E8F0", "glow": "#67E8F9", "accent": "#67E8F9"},
-    "pain":    {"bg": "#0A0810", "fg": "#E8E0E8", "glow": "#C084FC", "accent": "#C084FC"},
-    "plea":    {"bg": "#0C0A08", "fg": "#F0E8E0", "glow": "#FBBF24", "accent": "#FBBF24"},
-    "storm":   {"bg": "#080610", "fg": "#F0F0FF", "glow": "#FB7185", "accent": "#FB7185"},
-    "hope":    {"bg": "#080C0A", "fg": "#E0F0E8", "glow": "#34D399", "accent": "#34D399"},
-    "release": {"bg": "#060810", "fg": "#D8D8E8", "glow": "#A78BFA", "accent": "#A78BFA"},
+# Bảng màu theo cảm xúc (chỉ thay đổi accent, nền luôn tối)
+MOOD_ACCENTS = {
+    "longing": "#67E8F9",    # Cyan nhẹ
+    "pain":    "#C084FC",    # Lavender
+    "plea":    "#FBBF24",    # Amber ấm
+    "storm":   "#FB7185",    # Rose đỏ
+    "hope":    "#34D399",    # Mint xanh
+    "release": "#A78BFA",    # Tím nhạt
 }
 
-FONT_LYRIC = "Segoe UI"
 FONT_LARGE = "Segoe UI"
 FONT_SMALL = "Segoe UI"
 FONT_TIME = "Segoe UI"
+FONT_TIME_BG = "#111118"
 
 
-class SingleScreenLyricApp:
+def hsl_to_hex(h, s, l):
+    """Chuyển HSL sang hex color."""
+    c = (1 - abs(2 * l - 1)) * s
+    x = c * (1 - abs((h / 60) % 2 - 1))
+    m = l - c / 2
+    if h < 60:
+        r, g, b = c, x, 0
+    elif h < 120:
+        r, g, b = x, c, 0
+    elif h < 180:
+        r, g, b = 0, c, x
+    elif h < 240:
+        r, g, b = 0, x, c
+    elif h < 300:
+        r, g, b = x, 0, c
+    else:
+        r, g, b = c, 0, x
+    return "#{:02x}{:02x}{:02x}".format(
+        int((r + m) * 255), int((g + m) * 255), int((b + m) * 255)
+    )
+
+
+class StarFieldApp:
     """
-    Ứng dụng phát nhạc & lyrics trên 1 màn hình duy nhất.
-    - Lyrics hiện dạng typewriter, đồng bộ với nhạc.
-    - Dòng hiện tại sáng, dòng trước mờ, dòng sau preview mờ nhạt.
-    - Thanh tiến trình ở dưới cùng.
-    - Glow animation phía sau lyrics.
-    - ESC để thoát.
+    Single-screen lyric sync player với bầu trời đêm tĩnh lặng.
+    - Sao drift cực chậm, fade nhẹ nhàng.
+    - Nền đổi màu cực chậm (3 phút/vòng).
+    - Lyrics typewriter đồng bộ nhạc.
+    - Thanh tiến trình ở cuối.
+    - [ESC] thoát | [Space] tạm dừng.
     """
     def __init__(self, audio_file="Stay.mp3", lyrics_file="lyrics.txt"):
         self.root = tk.Tk()
         self.root.attributes("-fullscreen", True)
         self.root.attributes("-topmost", True)
-        self.root.config(bg=BG_COLOR)
+        self.root.config(bg="#06060C")
         self.root.protocol("WM_DELETE_WINDOW", self.quit)
 
         self.screen_w = self.root.winfo_screenwidth()
@@ -68,9 +90,8 @@ class SingleScreenLyricApp:
         self.typewriter_text = ""
         self.typewriter_index = 0
         self.line_start_time = 0.0
-        self.last_mood = None
-        self.glow_alpha = 0.05
-        self.glow_direction = 1
+        self.current_mood = "longing"
+        self.accent_color = MOOD_ACCENTS["longing"]
 
         self.is_running = True
         self.is_paused = False
@@ -79,116 +100,158 @@ class SingleScreenLyricApp:
         self.total_paused_duration = 0.0
         self.current_time = 0.0
 
-        # 1. Nạp lyrics
         self.load_lyrics()
-
-        # 2. Khởi tạo âm thanh
         self.init_audio()
-
-        # 3. Phím tắt
-        self.root.bind_all("<Escape>", lambda e: self.quit())
-        self.root.bind_all("<space>", lambda e: self.toggle_pause())
-
-        # 4. Thiết lập giao diện
         self.build_ui()
+        self.generate_stars()
 
-        # 5. Bắt đầu vòng lặp
         self.start_wall_time = time.time()
         self.update()
 
     def build_ui(self):
         """Xây dựng giao diện single-screen."""
-        # === Canvas chính (toàn màn hình) ===
         self.main_canvas = tk.Canvas(
-            self.root,
-            bg=BG_COLOR,
-            highlightthickness=0
+            self.root, bg="#06060C", highlightthickness=0
         )
         self.main_canvas.pack(fill="both", expand=True)
 
-        # === Glow circle phía sau lyrics ===
-        self.glow_item = self.main_canvas.create_oval(
-            0, 0, 0, 0,
-            fill=GLOW_COLOR,
-            outline="",
-            stipple="gray50"
-        )
+        # === Nền gradient (nhiều rectangle xếp chồng, sau đó đổi màu dần) ===
+        self.gradient_rects = []
+        num_layers = 40
+        for i in range(num_layers):
+            y = int(i * self.screen_h / num_layers)
+            h = int(self.screen_h / num_layers) + 2
+            rect_id = self.main_canvas.create_rectangle(
+                0, y, self.screen_w, y + h,
+                fill="#06060C", outline=""
+            )
+            self.gradient_rects.append(rect_id)
 
-        # === Thanh tiến trình (bottom) ===
-        bar_h = 4
-        bar_y = self.screen_h - bar_h - 2
+        # === Ngôi sao ===
+        self.star_items = []
+        # (Tạo sau khi có screen size, nhưng gọi ngay - sẽ dùng values đã có)
+
+        # === Thanh tiến trình ===
+        bar_y = self.screen_h - 3
         self.progress_bar_bg = self.main_canvas.create_rectangle(
             0, bar_y, self.screen_w, self.screen_h,
-            fill="#1A1A2E", outline=""
+            fill="#0C0C14", outline=""
         )
         self.progress_bar_fill = self.main_canvas.create_rectangle(
             0, bar_y, 0, self.screen_h,
-            fill=PROGRESS_COLOR, outline=""
+            fill=self.accent_color, outline=""
         )
 
-        # === Thời gian hiển thị (góc dưới phải) ===
+        # === Thời gian ===
         self.time_text = self.main_canvas.create_text(
-            self.screen_w - 30, bar_y - 8,
+            self.screen_w - 25, bar_y - 8,
             text="0:00 / 0:00",
             font=(FONT_TIME, 10),
-            fill=DIM_COLOR,
+            fill="#3A3A4A",
             anchor="se"
         )
 
-        # === Dòng lyrics trước đó (trên, mờ) ===
-        self.prev_label_id = self.main_canvas.create_text(
-            self.screen_w // 2, 0,
-            text="",
-            font=(FONT_LARGE, 22, "normal"),
-            fill=DIM_COLOR,
-            anchor="center"
-        )
-
-        # === Dòng lyrics hiện tại (giữa, sáng) ===
-        self.current_label_id = self.main_canvas.create_text(
-            self.screen_w // 2, 0,
-            text="",
-            font=(FONT_LARGE, 26, "bold"),
-            fill=ACTIVE_COLOR,
-            anchor="center"
-        )
-
-        # === Dòng lyrics tiếp theo (dưới, mờ preview) ===
-        self.next_label_id = self.main_canvas.create_text(
-            self.screen_w // 2, 0,
-            text="",
-            font=(FONT_LARGE, 18, "normal"),
-            fill=DIM_COLOR,
-            anchor="center"
-        )
-
-        # === Title & Artist (trên cùng) ===
+        # === Title & Artist ===
         self.title_text = self.main_canvas.create_text(
             self.screen_w // 2, 20,
             text="STAY",
             font=(FONT_SMALL, 12, "bold"),
-            fill=DIM_COLOR,
+            fill="#2A2A38",
             anchor="center"
         )
         self.artist_text = self.main_canvas.create_text(
             self.screen_w // 2, 40,
             text="Justin Bieber & The Kid LAROI",
             font=(FONT_SMALL, 10),
-            fill=DIM_COLOR,
+            fill="#2A2A38",
             anchor="center"
         )
 
-        # === Controls hint (góc dưới trái) ===
+        # === Dòng lyrics trước đó (mờ) ===
+        self.prev_label_id = self.main_canvas.create_text(
+            self.screen_w // 2, 0,
+            text="",
+            font=(FONT_LARGE, 20, "normal"),
+            fill="#252535",
+            anchor="center"
+        )
+
+        # === Dòng lyrics hiện tại (sáng) ===
+        self.current_label_id = self.main_canvas.create_text(
+            self.screen_w // 2, 0,
+            text="",
+            font=(FONT_LARGE, 26, "bold"),
+            fill=self.accent_color,
+            anchor="center"
+        )
+
+        # === Dòng lyrics tiếp theo (preview mờ) ===
+        self.next_label_id = self.main_canvas.create_text(
+            self.screen_w // 2, 0,
+            text="",
+            font=(FONT_LARGE, 17, "normal"),
+            fill="#252535",
+            anchor="center"
+        )
+
+        # === Hint (góc dưới trái) ===
         self.hint_text = self.main_canvas.create_text(
             20, bar_y - 8,
-            text="[ESC] Thoát  |  [Space] Tạm dừng",
+            text="[ESC] Exit  |  [Space] Pause",
             font=(FONT_SMALL, 8),
-            fill="#2A2A3A",
+            fill="#1E1E2A",
             anchor="sw"
         )
 
+        # Tạo stars sau khi canvas đã có
+        self.create_stars()
+
+    def create_stars(self):
+        """Tạo các ngôi sao trên canvas."""
+        for star in self._stars:
+            r = star["size"]
+            x = star["x"]
+            y = star["y"]
+            color = star["color"]
+            star_id = self.main_canvas.create_oval(
+                x - r, y - r, x + r, y + r,
+                fill=color, outline=""
+            )
+            self.star_items.append((star_id, star))
+
+    def generate_stars(self):
+        """Tạo danh sách sao với thuộc tính ngẫu nhiên."""
+        self._stars = []
+        for _ in range(NUM_STARS):
+            sx = random.uniform(0, self.screen_w)
+            sy = random.uniform(0, self.screen_h)
+            size = random.choice([1, 1, 1, 1, 2, 2, 3])
+            brightness = random.uniform(0.08, 0.35)
+            # Tạo màu nền + brightness
+            base_r, base_g, base_b = 26, 26, 42  # #1A1A2A
+            cr = int(base_r * (1 + brightness))
+            cg = int(base_g * (1 + brightness))
+            cb = int(base_b * (1 + brightness * 1.2))
+            cr = min(255, cr)
+            cg = min(255, cg)
+            cb = min(255, cb)
+
+            star = {
+                "x": sx,
+                "y": sy,
+                "size": size,
+                "color": "#{:02x}{:02x}{:02x}".format(cr, cg, cb),
+                "fade_phase": random.uniform(0, 2 * math.pi),
+                "fade_speed": random.uniform(0.001, 0.004),
+                "base_brightness": brightness,
+                "drift_x": random.uniform(-0.04, 0.04),
+                "drift_y": random.uniform(-0.08, -0.01),
+                "current_alpha": 1.0,
+            }
+            self._stars.append(star)
+
     def load_lyrics(self):
-        """Đọc lyrics.txt: [giây|tốc_độ_gõ|cảm_xúc] Lời EN // Vietsub"""
+        """Đọc lyrics.txt: [giây|tốc_độ_gõ|cảm_xúc] Lời tiếng Anh"""
         if not os.path.exists(self.lyrics_file):
             print(f"[Error] File '{self.lyrics_file}' not found.")
             return
@@ -206,21 +269,11 @@ class SingleScreenLyricApp:
                         time_sec = float(parts[0].strip())
                         speed_ms = int(parts[1].strip()) if len(parts) > 1 else TYPEWRITER_SPEED
                         mood = parts[2].strip() if len(parts) > 2 else "longing"
-
-                        if "//" in content:
-                            eng, vie = content.split("//", 1)
-                            eng = eng.strip()
-                            vie = vie.strip()
-                        else:
-                            eng = content
-                            vie = ""
-
                         self.lyrics_timeline.append({
                             "time_sec": time_sec,
                             "speed_ms": speed_ms,
                             "mood": mood,
-                            "eng": eng,
-                            "vie": vie
+                            "eng": content,
                         })
                     except ValueError:
                         continue
@@ -234,19 +287,23 @@ class SingleScreenLyricApp:
         if os.path.exists(self.audio_file):
             pygame.mixer.music.load(self.audio_file)
             print(f"[Music] Audio ready: {os.path.basename(self.audio_file)}")
+            print(f"[Note] Placeholder audio - replace Stay.mp3 with the original track.")
         else:
-            print(f"[Warning] Audio not found. Timer fallback.")
+            print(f"[Info] No audio file. Timer sync active (press any key to start timer).")
+            self.timer_start = time.time()
 
     def toggle_pause(self):
         """Tạm dừng / tiếp tục."""
         if self.is_paused:
-            pygame.mixer.music.unpause()
+            if pygame.mixer.music.get_busy():
+                pygame.mixer.music.unpause()
             if self.pause_start_time:
                 self.total_paused_duration += time.time() - self.pause_start_time
                 self.pause_start_time = None
             self.is_paused = False
         else:
-            pygame.mixer.music.pause()
+            if pygame.mixer.music.get_busy():
+                pygame.mixer.music.pause()
             self.pause_start_time = time.time()
             self.is_paused = True
 
@@ -262,26 +319,76 @@ class SingleScreenLyricApp:
         return 0.0
 
     def format_time(self, seconds):
-        """Định dạng thời gian mm:ss."""
         m = int(seconds // 60)
         s = int(seconds % 60)
         return f"{m}:{s:02d}"
 
     def get_total_duration(self):
-        """Ước lượng tổng thời gian từ lyrics cuối."""
         if self.lyrics_timeline:
             return self.lyrics_timeline[-1]["time_sec"] + 10
         return 0
 
+    def update_background(self):
+        """Cập nhật nền: đổi màu gradient cực chậm."""
+        elapsed = self.current_time
+        hue_progress = (elapsed / BG_CYCLE_SECONDS) % 1.0
+
+        # Oscillate hue: 225° → 265° → 225°
+        hue = BG_HUE_START + BG_HUE_RANGE * math.sin(hue_progress * math.pi)
+        sat = 0.08
+        light = 0.035
+
+        base_color = hsl_to_hex(hue, sat, light)
+
+        for i, rect_id in enumerate(self.gradient_rects):
+            layer_ratio = i / len(self.gradient_rects)
+            l = light + layer_ratio * 0.02
+            color = hsl_to_hex(hue, sat, l)
+            self.main_canvas.itemconfig(rect_id, fill=color)
+
+    def update_stars(self):
+        """Cập nhật vị trí & độ sáng sao (drift chậm, fade nhẹ)."""
+        for star_id, star in self.star_items:
+            star["x"] += star["drift_x"]
+            star["y"] += star["drift_y"]
+
+            # Wrap around
+            if star["x"] < -5:
+                star["x"] = self.screen_w + 5
+            elif star["x"] > self.screen_w + 5:
+                star["x"] = -5
+            if star["y"] < -5:
+                star["y"] = self.screen_h + 5
+            elif star["y"] > self.screen_h + 5:
+                star["y"] = -5
+
+            # Fade in/out (very slow)
+            star["fade_phase"] += star["fade_speed"]
+            alpha = 0.5 + 0.5 * math.sin(star["fade_phase"])
+            star["current_alpha"] = alpha
+
+            brightness = star["base_brightness"] * alpha
+            base_r, base_g, base_b = 30, 30, 50
+            cr = min(255, int(base_r * (1 + brightness * 4)))
+            cg = min(255, int(base_g * (1 + brightness * 4)))
+            cb = min(255, int(base_b * (1 + brightness * 4.5)))
+            color = "#{:02x}{:02x}{:02x}".format(cr, cg, cb)
+
+            self.main_canvas.itemconfig(star_id, fill=color)
+
     def update(self):
-        """Vòng lặp chính: sync lyrics + animation."""
+        """Vòng lặp chính."""
         if not self.is_running:
             return
 
         if not self.is_paused:
             self.current_time = self.get_current_music_time()
 
-            # === 1. Kiểm tra xem có dòng lyrics mới cần hiển thị không ===
+            # Cập nhật nền + sao (mỗi frame)
+            self.update_background()
+            self.update_stars()
+
+            # === Lyrics sync ===
             while self.next_index < len(self.lyrics_timeline):
                 line = self.lyrics_timeline[self.next_index]
                 if self.current_time >= line["time_sec"]:
@@ -289,17 +396,25 @@ class SingleScreenLyricApp:
                         self.current_line_index = self.next_index
                         self.typewriter_index = 0
                         self.typewriter_text = ""
-                        self.line_start_time = self.current_time
-                        self.last_mood = line["mood"]
+                        self.current_mood = line["mood"]
+                        self.accent_color = MOOD_ACCENTS.get(
+                            self.current_mood, self.accent_color
+                        )
+                        self.main_canvas.itemconfig(
+                            self.current_label_id, fill=self.accent_color
+                        )
+                        self.main_canvas.itemconfig(
+                            self.progress_bar_fill, fill=self.accent_color
+                        )
                     self.next_index += 1
                 else:
                     break
 
-            # === 2. Typewriter animation (dựa trên thời gian kể từ dòng bắt đầu) ===
+            # Typewriter
             if self.current_line_index >= 0 and self.current_line_index < len(self.lyrics_timeline):
                 line = self.lyrics_timeline[self.current_line_index]
                 speed = line.get("speed_ms", TYPEWRITER_SPEED)
-                target_text = f"{line['eng']}\n— {line['vie']} —" if line["vie"] else line["eng"]
+                target_text = line["eng"]
 
                 time_since_start = self.current_time - self.line_start_time
                 chars_per_second = 1000.0 / max(speed, 1)
@@ -315,75 +430,44 @@ class SingleScreenLyricApp:
 
                 self.main_canvas.itemconfig(self.current_label_id, text=display_text)
 
-                # Cập nhật mood/theme background khi đổi section
-                theme = MOOD_THEMES.get(self.last_mood, MOOD_THEMES["longing"])
-                self.main_canvas.config(bg=theme["bg"])
+                # Vị trí các dòng lyrics
+                lyric_y = self.screen_h // 2 - 20
+                line_spacing = int(self.screen_h * 0.065)
 
-                # === 3. Glow animation ===
-                self.glow_alpha += 0.02 * self.glow_direction
-                if self.glow_alpha > 0.15:
-                    self.glow_direction = -1
-                elif self.glow_alpha < 0.02:
-                    self.glow_direction = 1
-                glow_size = int(800 + self.glow_alpha * 2000)
-                cx = self.screen_w // 2
-                cy = self.screen_h // 2 - 40
-                self.main_canvas.coords(
-                    self.glow_item,
-                    cx - glow_size // 2, cy - glow_size // 2,
-                    cx + glow_size // 2, cy + glow_size // 2
-                )
-                self.main_canvas.itemconfig(
-                    self.glow_item,
-                    fill=theme["glow"]
-                )
-
-                # === 4. Cập nhật vị trí các dòng lyrics ===
-                lyric_y = self.screen_h // 2 - 40
-                line_height = 48
-
-                # Dòng trước đó (mờ)
                 prev_text = ""
                 if self.current_line_index > 0:
                     prev_line = self.lyrics_timeline[self.current_line_index - 1]
                     prev_text = prev_line["eng"]
-                    if prev_line["vie"]:
-                        prev_text += f"\n— {prev_line['vie']} —"
-                self.main_canvas.coords(self.prev_label_id, self.screen_w // 2, lyric_y - line_height * 1.5)
+                self.main_canvas.coords(self.prev_label_id, self.screen_w // 2, lyric_y - line_spacing)
                 self.main_canvas.itemconfig(self.prev_label_id, text=prev_text)
 
-                # Dòng hiện tại (sáng)
                 self.main_canvas.coords(self.current_label_id, self.screen_w // 2, lyric_y)
 
-                # Dòng tiếp theo (preview mờ)
                 next_text = ""
                 if self.current_line_index + 1 < len(self.lyrics_timeline):
                     next_line = self.lyrics_timeline[self.current_line_index + 1]
                     next_text = next_line["eng"]
-                    if next_line["vie"]:
-                        next_text += f"\n— {next_line['vie']} —"
-                self.main_canvas.coords(self.next_label_id, self.screen_w // 2, lyric_y + line_height * 1.5)
+                self.main_canvas.coords(self.next_label_id, self.screen_w // 2, lyric_y + line_spacing)
                 self.main_canvas.itemconfig(self.next_label_id, text=next_text)
 
-                # === 5. Thanh tiến trình ===
+                # === Progress bar ===
                 total = self.get_total_duration()
                 progress = min(self.current_time / max(total, 1), 1.0)
                 bar_x = progress * self.screen_w
-                bar_y = self.screen_h - 4 - 2
+                bar_y = self.screen_h - 3
                 self.main_canvas.coords(
                     self.progress_bar_fill,
                     0, bar_y, bar_x, self.screen_h
                 )
 
-                # Thời gian
                 current_str = self.format_time(self.current_time)
                 total_str = self.format_time(total)
                 self.main_canvas.itemconfig(self.time_text, text=f"{current_str} / {total_str}")
 
-            # === 6. Kết thúc ===
+            # === Kết thúc ===
             if (self.next_index >= len(self.lyrics_timeline) and
                     self.current_line_index >= len(self.lyrics_timeline) - 1 and
-                    not pygame.mixer.music.get_busy()):
+                    (not pygame.mixer.music.get_busy() or not os.path.exists(self.audio_file))):
                 self.quit()
                 return
 
@@ -412,7 +496,7 @@ class SingleScreenLyricApp:
         """Khởi chạy."""
         print("=" * 60)
         print("  🎵 STAY - SINGLE SCREEN LYRIC PLAYER")
-        print("  [ESC] Thoát  |  [Space] Tạm dừng")
+        print("  [ESC] Exit  |  [Space] Pause")
         print("=" * 60)
         if os.path.exists(self.audio_file):
             pygame.mixer.music.play()
@@ -424,5 +508,5 @@ if __name__ == "__main__":
     audio = os.path.join(current_dir, "Stay.mp3")
     lyrics = os.path.join(current_dir, "lyrics.txt")
 
-    app = SingleScreenLyricApp(audio_file=audio, lyrics_file=lyrics)
+    app = StarFieldApp(audio_file=audio, lyrics_file=lyrics)
     app.start()
