@@ -100,8 +100,8 @@ class StarFieldApp:
         self.build_ui()
         self.init_audio()
 
-        self.start_wall_time = time.time()
-        self.update()
+        self.is_running = True
+        self.start_wall_time = None
 
     def build_ui(self):
         self.main_canvas = tk.Canvas(
@@ -264,14 +264,14 @@ class StarFieldApp:
 
     def toggle_pause(self):
         if self.is_paused:
-            if pygame.mixer.get_init() and pygame.mixer.music.get_busy():
+            if self.has_audio:
                 pygame.mixer.music.unpause()
             if self.pause_start_time:
                 self.total_paused_duration += time.time() - self.pause_start_time
                 self.pause_start_time = None
             self.is_paused = False
         else:
-            if pygame.mixer.get_init() and pygame.mixer.music.get_busy():
+            if self.has_audio:
                 pygame.mixer.music.pause()
             self.pause_start_time = time.time()
             self.is_paused = True
@@ -437,7 +437,11 @@ class StarFieldApp:
         print("  [ESC] Exit  |  [Space] Pause")
         print("=" * 60)
         if self.has_audio:
+            pygame.mixer.music.set_volume(1.0)
             pygame.mixer.music.play()
+            print("[Music] Playing...")
+        self.start_wall_time = time.time()
+        self.root.after(10, self.update)
         self.root.mainloop()
 
 
